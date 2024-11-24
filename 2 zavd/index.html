@@ -1,0 +1,435 @@
+ф<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        text-align: center;
+        font-size: 4em;
+      }
+      .box {
+        box-sizing: content-box;
+        width: 300px;
+        height: 20px;
+
+        padding: 20px;
+        border: 2px solid rgb(212, 208, 208);
+        vertical-align: top;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+      }
+      .wrapper {
+        display: flex;
+
+        flex-flow: row wrap;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-rows: 75px 1fr;
+      }
+      img {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .box2 {
+        width: 30%;
+        height: 30%;
+        padding: 20px;
+        justify-content: center;
+        background-color: lightcyan;
+
+        margin-right: auto;
+        margin-bottom: 15px;
+        margin-left: auto;
+      }
+
+      @media (min-width: 375px) and (max-width: 730px) {
+        html {
+          font-family: sans-serif; /* 1 */
+          -ms-text-size-adjust: 100%; /* 2 */
+          -webkit-text-size-adjust: 100%; /* 2 */
+        }
+        #temp {
+          visibility: hidden;
+        }
+        #hidethis {
+          visibility: hidden;
+        }
+
+        /**
+       * Remove default margin.
+       */
+
+        body {
+          margin: 0;
+        }
+
+        /* HTML5 display definitions
+         ========================================================================== */
+
+        /**
+       * Correct `block` display not defined for any HTML5 element in IE 8/9.
+       * Correct `block` display not defined for `details` or `summary` in IE 10/11
+       * and Firefox.
+       * Correct `block` display not defined for `main` in IE 11.
+       */
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+          display: block;
+        }
+
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        td,
+        th {
+          padding: 0;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        html {
+          font-size: 62.5%;
+        }
+        body {
+          font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+          line-height: 1.6;
+          font-weight: 400;
+          font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica,
+            Arial, sans-serif;
+          color: #222;
+        }
+
+        .section {
+          /* to chto nado*/
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        .nav a {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .nav,
+        .boxes,
+        .footer .footer form {
+          display: flex;
+          flex-flow: column-reverse;
+        }
+
+        .boxes div {
+          flex: 2 2 250px;
+          margin: 10px;
+          border-radius: 5px;
+          padding: 10px 10px 0 10px;
+          background-color: rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-flow: column;
+        }
+        .boxes .more {
+          margin-top: auto;
+        }
+        .box2 {
+          width: 100%;
+          height: 500px;
+          padding: 2px;
+
+          background-color: lightcyan;
+        }
+      }
+      @media (min-width: 730px) and (max-width: 1200px) {
+        html {
+          font-family: sans-serif; /* 1 */
+          -ms-text-size-adjust: 100%; /* 2 */
+          -webkit-text-size-adjust: 100%; /* 2 */
+        }
+        #temp {
+          visibility: hidden;
+        }
+        #hidethis {
+          visibility: hidden;
+        }
+
+        /**
+       * Remove default margin.
+       */
+
+        body {
+          margin: 0;
+        }
+
+        /* HTML5 display definitions
+         ========================================================================== */
+
+        /**
+       * Correct `block` display not defined for any HTML5 element in IE 8/9.
+       * Correct `block` display not defined for `details` or `summary` in IE 10/11
+       * and Firefox.
+       * Correct `block` display not defined for `main` in IE 11.
+       */
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+          display: block;
+        }
+
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        td,
+        th {
+          padding: 0;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        html {
+          font-size: 62.5%;
+        }
+        body {
+          font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+          line-height: 1.6;
+          font-weight: 400;
+          font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica,
+            Arial, sans-serif;
+          color: #222;
+        }
+
+        .section {
+          /* to chto nado*/
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        .nav a {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .nav,
+        .boxes,
+        .footer .footer form {
+          display: flex;
+          flex-flow: column-reverse;
+        }
+
+        .boxes div {
+          flex: 2 2 250px;
+          margin: 10px;
+          border-radius: 5px;
+          padding: 10px 10px 0 10px;
+          background-color: rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-flow: column;
+        }
+        .boxes .more {
+          margin-top: auto;
+        }
+        .box2 {
+          width: 100%;
+          height: 500px;
+          padding: 2px;
+
+          background-color: lightcyan;
+        }
+      }
+      @media (min-width: 1200px) {
+        html {
+          font-family: sans-serif; /* 1 */
+          -ms-text-size-adjust: 100%; /* 2 */
+          -webkit-text-size-adjust: 100%; /* 2 */
+        }
+
+        /**
+       * Remove default margin.
+       */
+
+        body {
+          margin: 0;
+        }
+
+        /* HTML5 display definitions
+         ========================================================================== */
+
+        /**
+       * Correct `block` display not defined for any HTML5 element in IE 8/9.
+       * Correct `block` display not defined for `details` or `summary` in IE 10/11
+       * and Firefox.
+       * Correct `block` display not defined for `main` in IE 11.
+       */
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+          display: block;
+        }
+
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        td,
+        th {
+          padding: 0;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+        html {
+          font-size: 62.5%;
+        }
+        body {
+          font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+          line-height: 1.6;
+          font-weight: 400;
+          font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica,
+            Arial, sans-serif;
+          color: #222;
+        }
+
+        .section {
+          /* to chto nado*/
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        .nav a {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .nav,
+        .boxes,
+        .footer .footer form {
+          display: flex;
+          flex-flow: row wrap;
+        }
+
+        .boxes div {
+          flex: 2 2 250px;
+          margin: 10px;
+          border-radius: 5px;
+          padding: 10px 10px 0 10px;
+          background-color: rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-flow: column;
+        }
+        .boxes .more {
+          margin-top: auto;
+        }
+        .box2 {
+          width: 200px;
+          height: 500px;
+          padding: 2px;
+
+          background-color: lightcyan;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Тортики i Тістечка</h1>
+
+    <div class="section boxes">
+      <div>
+        <img src="1.jpg" alt="no" />
+        <p>Пиріг Америка</p>
+        <p id="hidethis" class="more">
+          <a href="#" class="button">200 kaloriy</a>
+        </p>
+      </div>
+      <div>
+        <img src="2.jpg" alt="no" />
+        <p>Тістечко Вершкове</p>
+        <p id="hidethis" class="more"><a href="#" class="button">100 kal</a></p>
+      </div>
+      <div>
+        <img src="3.jpg" alt="no" />
+        <p>Рулет Смачний</p>
+        <p id="hidethis" class="more"><a href="#" class="button">100 kal</a></p>
+      </div>
+      <div class="box2">
+        <label id="hidethis" for="temp">Кількість калорій</label><br />
+        <input type="range" id="temp" name="temp" list="tickmarks" />
+
+        <div>Пиріг</div>
+        <div>Тістечко</div>
+        <div>Рулет</div>
+        <div>Торт</div>
+        <div>Сирник</div>
+        <div>Скинути фільтр</div>
+      </div>
+    </div>
+    <div class="section boxes">
+      <div>
+        <img src="4.jpg" alt="no" />
+        <p>Торт ситний</p>
+        <p id="hidethis" class="more">
+          <a href="#" class="button">200 kaloriy</a>
+        </p>
+      </div>
+      <div>
+        <img src="5.jpg" alt="no" />
+        <p>Тістечко жовте</p>
+        <p id="hidethis" class="more"><a href="#" class="button">100 kal</a></p>
+      </div>
+      <div>
+        <img src="6.jpg" alt="no" />
+        <p>Мафіни француз</p>
+        <p id="hidethis" class="more"><a href="#" class="button">100 kal</a></p>
+      </div>
+      <div>
+        <img src="7.jpg" alt="no" />
+        <p>Кекс Вишуканий</p>
+        <p id="hidethis" class="more"><a href="#" class="button">100 kal</a></p>
+      </div>
+    </div>
+  </body>
+</html>
